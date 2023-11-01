@@ -112,4 +112,31 @@ async def UsersNotRecommend( anio : int ):
 
     return resultado
 
+#FUNCION 5
+@app.get( "/sentiment_analysis/{anio}")
+async def sentiment_analysis( anio : int ):
 
+    '''Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios 
+    que se encuentren categorizados con un análisis de sentimiento.
+    Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}'''
+    
+    #Se filtran los sentimientos por año y las igualo al año que se ingresa en la consulta transformandolo en string 
+    sentimientos_año= df_sentiment_analysis[df_sentiment_analysis["Año"]== int(anio)]
+    
+    #Se inicia una variable vacia por cada sentimiento para ir contandolos 
+    Negativos = 0
+    Neutral = 0
+    Positivos = 0
+    
+    #Se itera sobre las filas de reviews_por_anio y se distibuyen los datos segun la columna "sentiment_analysis"
+    for i in df_sentiment_analysis["sentiment_analisis"]:
+        if i == 0:
+            Negativos += 1
+        elif i == 1:
+            Neutral += 1 
+        elif i == 2:
+            Positivos += 1
+
+    count_sentiment ={"Negative": Negativos , "Neutral" : Neutral, "Positive": Positivos}
+    
+    return count_sentiment
