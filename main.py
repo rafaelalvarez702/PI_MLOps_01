@@ -57,15 +57,15 @@ async def UserForGenre( genero : str ):
     return resultado
 
 #FUNCION 3
-@app.get( "/UsersRecommend/{año}")
-async def UsersRecommend( año : int ):
+@app.get( "/UsersRecommend/{anio}")
+async def UsersRecommend( anio : int ):
     
     '''Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. 
     (reviews.recommend = True y comentarios positivos/neutrales)
     Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]'''
     
        # Filtra el DataFrame para el año dado y los criterios especificados.
-    juegos_filtrados = df_UserRecommend[(df_UserRecommend['Año'] == año) & (df_UserRecommend['recommend'] == True) & 
+    juegos_filtrados = df_UserRecommend[(df_UserRecommend['Año'] == anio) & (df_UserRecommend['recommend'] == True) & 
                                         ((df_UserRecommend['sentiment_analisis'] == 2) | (df_UserRecommend['sentiment_analisis'] == 1))]
 
     # Agrupa por el nombre del juego y suma las recomendaciones y sentimientos.
@@ -81,7 +81,7 @@ async def UsersRecommend( año : int ):
     top3_juegos = ranking_ordenado.head(3)
 
     # Crea el formato de retorno deseado.
-    resultado = {{"Puesto {}: {}".format(i + 1, juego)} for i, juego in enumerate(top3_juegos.index)}
+    resultado = [{"Puesto {}: {}".format(i + 1, juego)} for i, juego in enumerate(top3_juegos.index)]
 
     return resultado
 
