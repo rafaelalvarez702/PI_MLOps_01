@@ -140,3 +140,29 @@ async def sentiment_analysis( anio : int ):
     count_sentiment ={"Negative": Negativos , "Neutral" : Neutral, "Positive": Positivos}
     
     return count_sentiment
+
+
+#sistema de recomendacion
+@app.get( "/recomendacion_juego/{anio}")
+async def recomendacion_juego( anio : int ):
+
+    '''Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.'''
+    # Encuentra el índice del juego ingresado por ID
+    juego = df_r_juego.index[df_r_juego['id'] == id]
+    if juego.empty:
+        return "El juego con el ID especificado no existe en la base de datos."
+    
+    # Extrae las características del juego ingresado
+    caracteristicas =df_r_juego.iloc[juego, 3:].values.reshape(1, -1)
+    
+    # Calcula la similitud coseno entre el juego ingresado y todos los demás juegos
+    similitudes = cosine_similarity(df_r_juego.iloc[:, 3:], caracteristicas)
+    
+    # Obtiene los índices de los juegos más similares (excluyendo el juego de entrada)
+    indices_juegos_similares = similitudes.argsort(axis=0)[::-1][1:6]
+    indices_juegos_similares = indices_juegos_similares.flatten()[1:]
+    
+    # Obtiene los juegos más similares en función de los índices
+    similares = df_r_juego.iloc[indices_juegos_similares]['app_name']
+    
+    return similares
