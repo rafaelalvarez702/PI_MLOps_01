@@ -19,8 +19,13 @@ df_UserRecommend = pd.read_parquet("Datos/df_UserRecommend.parquet")
 df_sentiment_analysis = pd.read_parquet("Datos/df_sentiment_analysis.parquet")
 df_r_juego= pd.read_parquet("Datos/df_r_juego.parquet")
 
+
+@app.get("/")
+def pagppal():
+    return {"Bienvenido"}
+
 #FUNCION 1
-@app.get( "/PlayTimeGenre/{genero}", name = "PlayTimeGenre")
+@app.get( "/PlayTimeGenre/{genero}")
 async def PlayTimeGenre( genero : str ):
  
     data= df_PlayTimeGenre[df_PlayTimeGenre['genres'] == genero]
