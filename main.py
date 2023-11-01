@@ -143,8 +143,8 @@ async def sentiment_analysis( anio : int ):
 
 
 #sistema de recomendacion
-@app.get( "/recomendacion_juego/{anio}")
-async def recomendacion_juego( anio : int ):
+@app.get( "/recomendacion_juego/{id}")
+async def recomendacion_juego( id : int ):
 
     '''Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.'''
     # Encuentra el índice del juego ingresado por ID
