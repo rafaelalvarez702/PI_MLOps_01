@@ -4,7 +4,7 @@
 
   # Introducción 
 
-📌 Para este proyecto se nos proporciona un conjunto de tres archivos de steam (Steam es una plataforma de distribución digital de videojuegos desarrollada por Valve Corporation) para poder trabajar en ellos y crear un Producto Minimo Viable (MVP), que contiene una la implementaciónde una API  y con un modelo de Machine Learningque. los datos provienen de los archivos siguientes: 
+📌 Para este proyecto se nos proporciona un conjunto de tres archivos de steam (Steam es una plataforma de distribución digital de videojuegos desarrollada por Valve Corporation) para poder trabajar en ellos y crear un Producto Minimo Viable (MVP), que contiene una la implementaciónde una API  y con un modelo de Machine Learning. los datos provienen de los archivos siguientes: 
 
   
 
@@ -32,7 +32,7 @@ Steam es una plataforma de distribución digital y comunidad de jugadores líder
 
 # Desarrollo  
 
-En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que no nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase. Para este caso se comprimieron un formatoparquet. 
+En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que }nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase, estos se comprimieron un formato parquet. 
 
   
 
@@ -44,7 +44,7 @@ Para revisar en detalle el trabajo realizado, les dejo el siguiente enlace: [ETL
 
 El proyecto incluye el desarrollo de un modelo de análisis de sentimientos aplicado a los comentarios de los usuarios de juegos. Este modelo se desarrolla sobre el conjunto de datos user_reviews valiendonos de la librería TextBlob que  es parte de una biblioteca de procesamiento de lenguaje natural (NLP). 
 
-Adicionalmente se preparan los conjuntos de datos necesarios para el desarrollo de algunas funciones. 
+Adicionalmente se preparan los conjuntos de datos necesarios para el desarrollo de algunas funciones y el modelo de Machine Learning. 
 
   
 
@@ -78,7 +78,7 @@ def sentiment_analysis( año : int ): Según el año de lanzamiento, se devuelve
 
 Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278} 
 
-Adjunto el cuaderno en el siguiente enlace:  [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/funciones_api.ipynb) 
+Adjunto el cuaderno en el siguiente enlace:  [Funciones y EDA](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/funciones_api.ipynb) 
 
   
 
