@@ -30,8 +30,7 @@ async def PlayTimeGenre( genero : str ):
     
     '''
     Debe devolver año con mas horas jugadas para dicho género.
-    Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}
-    '''
+    Ejemplo PlayTimeGenre('ACtION'):'''
     genero = genero.lower()   
     data= df_PlayTimeGenre[df_PlayTimeGenre['genres'] == genero]
     año_horas = data.groupby('Año')['playtime_forever'].sum().idxmax(0)
@@ -43,9 +42,7 @@ async def UserForGenre( genero : str ):
 
     '''
     Debe devolver el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año.
-    Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf, 
-    "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
-    '''
+    Ejemplo UserForGenre("Action")'''
     genero = genero.lower() 
     data= df_UserForGenre[df_UserForGenre['genres'] == genero]
     usuarios_horas = data.groupby('user_id')['playtime_forever'].sum().idxmax(0)
@@ -63,7 +60,7 @@ async def UsersRecommend( anio : int ):
     
     '''Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. 
     (reviews.recommend = True y comentarios positivos/neutrales)
-    Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]'''
+    Ejemplo UsersRecommend(2014)'''
     
        # Filtra el DataFrame para el año dado y los criterios especificados.
     juegos_filtrados = df_UserRecommend[(df_UserRecommend['Año'] == anio) & (df_UserRecommend['recommend'] == True) & 
@@ -90,7 +87,7 @@ async def UsersRecommend( anio : int ):
 @app.get( "/UsersNotRecommend/{anio}")
 async def UsersNotRecommend( anio : int ):
     
-    '''Devuelve el top 3 de juegos NO recomendados por usuarios para el año dado.'''
+    '''Devuelve el top 3 de juegos NO recomendados por usuarios para el año dado. ejemplo UsersNotRecommend( 2014 )'''
    
     # Filtra el DataFrame para el año dado y los criterios especificados.
     juegos_filtrados = df_UserRecommend[(df_UserRecommend['Año'] == anio) & (df_UserRecommend['recommend'] == False) & 
@@ -119,7 +116,7 @@ async def sentiment_analysis( anio : int ):
 
     '''Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios 
     que se encuentren categorizados con un análisis de sentimiento.
-    Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}'''
+    Ejemplo sentiment_analysis(2015)'''
     
     #Se filtran los sentimientos por año y las igualo al año que se ingresa en la consulta transformandolo en string 
     sentimientos_año= df_sentiment_analysis[df_sentiment_analysis["Año"]== int(anio)]
@@ -147,7 +144,8 @@ async def sentiment_analysis( anio : int ):
 @app.get( "/recomendacion_juego/{id}")
 async def recomendacion_juego( id : int ):
 
-    '''Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.'''
+    '''Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.
+    ejemplo recomendacion_juego(223750)'''
     # Encuentra el índice del juego ingresado por ID
     juego = df_r_juego.index[df_r_juego['id'] == id]
     if juego.empty:
