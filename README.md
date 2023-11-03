@@ -90,7 +90,3 @@ def recomendacion_juego( id de producto ): Ingresando el id de producto, deberí
 link al entorno web de la api realizado para poder realizar consultas: [Despliegue](https://rafaelalvarez702-pi-mlops-01-hdhw.onrender.com/docs) 
 
   
-
-VIDEO 
-
-link al video del proyecto y sus funciones: [Presentacion](https://rafaelalvarez702-pi-mlops-01-hdhw.onrender.com/docs)
