@@ -38,7 +38,7 @@ Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
 def sentiment_analysis( año : int ): Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento.
 Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}
-Adjunto el cuaderno en el siguiente enlace:  [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_items.ipynb)
+Adjunto el cuaderno en el siguiente enlace:  [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/funciones_api.ipynb)
 
 API
 link al entorno web de la api realizado para poder realizar consultas: https://prueba-api-gj31.onrender.com/docs#
