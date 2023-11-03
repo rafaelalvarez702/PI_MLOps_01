@@ -32,9 +32,9 @@ async def PlayTimeGenre( genero : str ):
     usando como parametro el genero.
     Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}'''
  
+    genero = genero.lower()   
     data= df_PlayTimeGenre[df_PlayTimeGenre['genres'] == genero]
-    # Encontrar el año con más horas jugadas
-    año_horas = data.groupby('Año')['playtime_forever'].sum().idxmax(0)
+    año_horas = data.groupby('Año')['playtime_forever'].sum().idxmax(0)  
     return {f"Año de lanzamiento con más horas jugadas para {genero}": año_horas}
 
 #FUNCION 2
@@ -46,6 +46,7 @@ async def UserForGenre( genero : str ):
     Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf, 
     "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
     '''
+    genero = genero.lower() 
     data= df_UserForGenre[df_UserForGenre['genres'] == genero]
     usuarios_horas = data.groupby('user_id')['playtime_forever'].sum().idxmax(0)
     horas_por_año = data.groupby('Año')['playtime_forever'].sum().reset_index()
