@@ -90,4 +90,4 @@ link al entorno web de la api realizado para poder realizar consultas: [Desplieg
 
 VIDEO 
 
-link al video explicativo del proyecto y sus funciones: https://www.youtube.com/watch?v=-e8pdmXf3C4 
+link al video del proyecto y sus funciones: [Presentacion](https://rafaelalvarez702-pi-mlops-01-hdhw.onrender.com/docs)
