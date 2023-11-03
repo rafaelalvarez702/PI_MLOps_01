@@ -15,8 +15,8 @@ Para entender el detalle de cada uno de los datasets, siga el siguiente enlace: 
 Steam es una plataforma de distribución digital y comunidad de jugadores líderes en la industria de los videojuegos. Desarrollado por Valve Corporation, Steam ofrece a los usuarios una amplia gama de juegos para PC y otras plataformas. También es conocido por su sólida infraestructura de actualización y gestión de juegos, así como por su plataforma de desarrollo de juegos Steamworks, que brinda a los desarrolladores herramientas para crear y publicar juegos en la plataforma. Steam ha sido un pionero en la distribución digital de videojuegos y ha desempeñado un papel fundamental en la evolución de la industria de los videojuegos en línea.
 
 # Desarrollo 
-En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que no nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase. Para este caso se comprimieron un formatoparquet
-https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_steam_games.ipynb
+En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que no nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase. Para este caso se comprimieron un formatoparquet.
+
 Para revisar en detalle el trabajo realizado, les dejo el siguiente enlace: [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_items.ipynb),  [ETL_reviews](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_reviews.ipynb), [ETL_Steam_games](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_steam_games.ipynb)
 
 Ingeniería de características
