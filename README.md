@@ -4,7 +4,7 @@
 
   # Introducción 
 
-📌 Para este proyecto se nos proporciona un conjunto de tres archivos de steam (Steam es una plataforma de distribución digital de videojuegos desarrollada por Valve Corporation) para poder trabajar en ellos y crear un Producto Minimo Viable (MVP), que contiene una la implementaciónde una API  y con un modelo de Machine Learningque asu vez realizar análisis de sentimientos a partir de los comentarios de los usuarios y un sistema de recomendación de videojuegos para la plataforma. los datos provienen de los archivos siguientes: 
+📌 Para este proyecto se nos proporciona un conjunto de tres archivos de steam (Steam es una plataforma de distribución digital de videojuegos desarrollada por Valve Corporation) para poder trabajar en ellos y crear un Producto Minimo Viable (MVP), que contiene una la implementaciónde una API  y con un modelo de Machine Learningque. los datos provienen de los archivos siguientes: 
 
   
 
