@@ -80,9 +80,12 @@ Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}
 
 Adjunto el cuaderno en el siguiente enlace:  [Funciones y EDA](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/funciones_api.ipynb) 
 
-  
+# Modelamiento (Machine Learning)
+En este paso, desarrollamos el modelo de aprendizaje automático utilizando los datos preparados anteriormente. Como base para el mismo se utiliza el conjunto de datos steam_games. 
 
-API 
+def recomendacion_juego( id de producto ): Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.
+
+# API y Render
 
 link al entorno web de la api realizado para poder realizar consultas: [Despliegue](https://rafaelalvarez702-pi-mlops-01-hdhw.onrender.com/docs) 
 
