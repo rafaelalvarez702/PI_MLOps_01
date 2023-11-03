@@ -9,7 +9,7 @@ user_reviews: información que detalla las reseñas realizadas por los usuarios 
 
 user_items: información acerca de la actividad de los usuarios dentro de la plataforma Steam.
 
-Para entender el detalle de cada uno de los datasets, siga el siguiente enlace: [Data](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj)
+Para entender el detalle de cada uno de los datasets, siga el siguiente enlace: [Data](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj), 
 
 # Contexto
 Steam es una plataforma de distribución digital y comunidad de jugadores líderes en la industria de los videojuegos. Desarrollado por Valve Corporation, Steam ofrece a los usuarios una amplia gama de juegos para PC y otras plataformas. También es conocido por su sólida infraestructura de actualización y gestión de juegos, así como por su plataforma de desarrollo de juegos Steamworks, que brinda a los desarrolladores herramientas para crear y publicar juegos en la plataforma. Steam ha sido un pionero en la distribución digital de videojuegos y ha desempeñado un papel fundamental en la evolución de la industria de los videojuegos en línea.
@@ -17,7 +17,7 @@ Steam es una plataforma de distribución digital y comunidad de jugadores líder
 # Desarrollo 
 En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que no nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase. Para este caso se comprimieron un formatoparquet
 
-Para revisar en detalle el trabajo realizado, les dejo el siguiente enlace: [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_items.ipynb)
+Para revisar en detalle el trabajo realizado, les dejo el siguiente enlace: [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_items.ipynb),  [ETL_reviews](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_reviews.ipynb)
 
 Ingeniería de características
 Una vez realizado el etl, con mis datos limpios, procedi a hacer el proceso de ingeniería de características , donde tuve que crear análisis de sentimiento y varias funciones más que se pidieron, una vez realizado todo que tuve que crear una API local que me permitió interactuar con las funciones realizadas con los datos, utilice render para levantar un servicio web en línea, donde cualquier persona puede interactuar con los datos y obtener información.💥
