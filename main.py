@@ -34,11 +34,7 @@ async def PlayTimeGenre( genero : str ):
     '''
     genero = genero.lower()   
     data= df_PlayTimeGenre[df_PlayTimeGenre['genres'] == genero]
-   
     año_horas = data.groupby('Año')['playtime_forever'].sum().idxmax(0)
-    
-   
-    
     return {f"Año de lanzamiento con más horas jugadas para {genero}": año_horas}
 
 #FUNCION 2
