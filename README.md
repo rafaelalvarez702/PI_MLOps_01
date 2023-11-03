@@ -26,7 +26,7 @@ Para entender el detalle de cada uno de los datasets, siga el siguiente enlace: 
 
 # Contexto 
 
-Steam es una plataforma de distribución digital y comunidad de jugadores líderes en la industria de los videojuegos. Desarrollado por Valve Corporation, Steam ofrece a los usuarios una amplia gama de juegos para PC y otras plataformas. También es conocido por su sólida infraestructura de actualización y gestión de juegos, así como por su plataforma de desarrollo de juegos Steamworks, que brinda a los desarrolladores herramientas para crear y publicar juegos en la plataforma. Steam ha sido un pionero en la distribución digital de videojuegos y ha desempeñado un papel fundamental en la evolución de la industria de los videojuegos en línea. 
+Steam es una plataforma de distribución digital y comunidad de jugadores líderes en la industria de los videojuegos. Desarrollado por Valve Corporation, Steam ofrece a los usuarios una amplia gama de juegos para PC y otras plataformas. También es conocido por su sólida infraestructura de actualización y gestión de juegos,  así como por su plataforma de desarrollo de juegos Steamworks, que brinda a los desarrolladores herramientas para crear y publicar juegos en la plataforma. Steam ha sido un pionero en la distribución digital de videojuegos y ha desempeñado un papel fundamental en la evolución de la industria de los videojuegos en línea. 
 
   
 
