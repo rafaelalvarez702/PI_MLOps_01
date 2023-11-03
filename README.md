@@ -32,7 +32,7 @@ Steam es una plataforma de distribución digital y comunidad de jugadores líder
 
 # Desarrollo  
 
-En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que }nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase, estos se comprimieron un formato parquet. 
+En esta fase del proyecto se realiza la extracción de datos, a fin de familiarizarse con ellos y comenzar con la etapa de limpieza de datos que }nos permita el correcto entedimiento y lectura del archivo a fin de lograr los objetivos. Terminada la limpieza se generará el conjunto de datos para la siguiente fase, estos se guardaron en formato parquet. 
 
   
 
