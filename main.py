@@ -28,13 +28,17 @@ def pagppal():
 @app.get( "/PlayTimeGenre/{genero}")
 async def PlayTimeGenre( genero : str ):
     
-    '''Esta funcion debe devolver año con mas horas jugadas para dicho género.
-    usando como parametro el genero.
-    Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}'''
- 
+    '''
+    Debe devolver año con mas horas jugadas para dicho género.
+    Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}
+    '''
     genero = genero.lower()   
     data= df_PlayTimeGenre[df_PlayTimeGenre['genres'] == genero]
-    año_horas = data.groupby('Año')['playtime_forever'].sum().idxmax(0)  
+   
+    año_horas = data.groupby('Año')['playtime_forever'].sum().idxmax(0)
+    
+   
+    
     return {f"Año de lanzamiento con más horas jugadas para {genero}": año_horas}
 
 #FUNCION 2
