@@ -19,21 +19,26 @@ En esta fase del proyecto se realiza la extracción de datos, a fin de familiari
 
 Para revisar en detalle el trabajo realizado, les dejo el siguiente enlace: [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_items.ipynb),  [ETL_reviews](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_reviews.ipynb), [ETL_Steam_games](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_steam_games.ipynb)
 
-Ingeniería de características
-Una vez realizado el etl, con mis datos limpios, procedi a hacer el proceso de ingeniería de características , donde tuve que crear análisis de sentimiento y varias funciones más que se pidieron, una vez realizado todo que tuve que crear una API local que me permitió interactuar con las funciones realizadas con los datos, utilice render para levantar un servicio web en línea, donde cualquier persona puede interactuar con los datos y obtener información.💥
+# Ingeniería de características
+El proyecto incluye el desarrollo de un modelo de análisis de sentimientos aplicado a los comentarios de los usuarios de juegos. Este modelo se desarrolla sobre el conjunto de datos user_reviews valiendonos de la librería TextBlob que  es parte de una biblioteca de procesamiento de lenguaje natural (NLP).
+Adicionalmente se preparan los conjuntos de datos necesarios para el desaroolo de algunas funciones.
 
-Funciones a realizar
-userdata(User_id: str): Esta función toma como entrada el ID de un usuario y devuelve la cantidad de dinero gastado por ese usuario, el porcentaje de recomendación basado en las revisiones (reviews.recommend) y la cantidad de items relacionados con ese usuario .
+# Funciones a realizar
+def PlayTimeGenre( genero : str ): Debe devolver año con mas horas jugadas para dicho género.
+Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}
 
-countreviews(AAAA-MM-DD y AAAA-MM-DD: str): Esta función toma dos fechas en formato AAAA-MM-DD como entrada y devuelve la cantidad de usuarios que realizaron reviews entre esas dos fechas, así como el porcentaje de Recomendación basada en las revisiones realizadas durante ese período.
+def UserForGenre( genero : str ): Debe devolver el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año.
+Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf, "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
 
-género(género: str): Esta función toma un género como entrada y devuelve la posición en la que se encuentra ese género en un ranking analizado bajo la columna PlayTimeForever.
+def UsersRecommend( año : int ): Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. (reviews.recommend = True y comentarios positivos/neutrales)
+Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-userforgenre(género: str): Esta función toma un género como entrada y devuelve los cinco usuarios con más horas de juego en ese género, junto con sus URL de usuario (del juego) y sus ID de usuario.
+def UsersNotRecommend( año : int ): Devuelve el top 3 de juegos MENOS recomendados por usuarios para el año dado. (reviews.recommend = False y comentarios negativos)
+Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-desarrollador(desarrollador: str): Esta función toma como entrada el nombre de una empresa desarrolladora y devuelve la cantidad de items (juegos o contenido) producidos por esa empresa por año, así como el porcentaje de contenido gratuito en esos items.
-
-sentiment_analysis(año: int): Esta función toma un año como entrada y devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentran categorizados con un análisis de sentimiento para ese año en particular.
+def sentiment_analysis( año : int ): Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento.
+Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}
+Adjunto el cuaderno en el siguiente enlace:  [ETL_items](https://github.com/rafaelalvarez702/PI_MLOps_01/blob/main/ETL_items.ipynb)
 
 API
 link al entorno web de la api realizado para poder realizar consultas: https://prueba-api-gj31.onrender.com/docs#
